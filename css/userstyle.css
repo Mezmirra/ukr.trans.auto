@@ -12,7 +12,7 @@
     margin-bottom: 60px;
     font-family: 'Ubuntu', sans-serif;
     font-size: 40px;
-    font-weight: 700;
+    font-weight: 400;
     text-transform: uppercase;
     line-height: 44px;
 }
@@ -41,11 +41,37 @@
     top: 450px;
 }
 
+.work-cycle__runner-wrapper {
+    position: absolute;
+    top: 293px;
+    left: 150px;
+    animation-name: moving;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+    -moz-animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite;
+}
+
+.work-cycle__runner {
+    animation-name: rotating;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+    -moz-animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite;
+}
+
 .work-cycle__item {
     display: inline-block;
     text-align: center;
     position: absolute;
     width: 120px;
+}
+
+.work-cycle__item:hover .work-cycle__item-text-img {
+    animation-name: pulse;
+    animation-duration: 0.5s;
 }
 
 .work-cycle__item-text {
@@ -110,4 +136,144 @@
 .work-cycle__item-delivery {
     top: 0;
     right: 50px;
+}
+
+/* ====== ANIMATION ====== */
+
+/* took here: https://github.com/daneden/animate.css/blob/master/source/attention_seekers/pulse.css */
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes moving {
+    0% {
+        top: 293px;
+        left: 150px;
+    }
+    6% {
+        transform: translateX(75px);
+    }
+    12.5% {
+        transform: translate(125px, -90px);
+    }
+    25% {
+        transform: translate(210px, 95px);
+    }
+    37.5% {
+        transform: translate(303px, -95px);
+    }
+    50% {
+        transform: translate(395px, 95px);
+    }
+    62.5% {
+        transform: translate(483px, -95px);
+    }
+    75% {
+        transform: translate(575px, 95px);
+    }
+    87.5% {
+        transform: translate(663px, -95px);
+    }
+    94% {
+        transform: translate(720px, 0);
+    }
+    100% {
+        transform: translate(765px, 0);
+    } 
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+    6% {
+        transform: rotate(0deg);
+    }
+    7% {
+        transform: rotate(-15deg);
+    }    
+    10% {
+        transform: rotate(-15deg);
+    }
+    12.5% {
+        transform: rotate(0deg);
+    }
+    14% {
+        transform: rotate(15deg);
+    }
+    23.5% {
+        transform: rotate(15deg);
+    }
+    25% {
+        transform: rotate(0deg);
+    }
+    26.5% {
+        transform: rotate(-15deg);
+    }
+    36% {
+        transform: rotate(-15deg);
+    }
+    37.5% {
+        transform: rotate(0deg);
+    }
+    39% {
+        transform: rotate(15deg);
+    }
+    48.5% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    51.5% {
+        transform: rotate(-15deg);
+    }
+    61% {
+        transform: rotate(-15deg);
+    }
+    62.5% {
+        transform: rotate(0deg);
+    }
+    64% {
+        transform: rotate(15deg);
+    }
+    73.5% {
+        transform: rotate(15deg);
+    }
+    75% {
+        transform: rotate(0deg);
+    }
+    76.5% {
+        transform: rotate(-15deg);
+    }
+    86% {
+        transform: rotate(-15deg);
+    }
+    87.5% {
+        transform: rotate(0deg);
+    }
+    89% {
+        transform: rotate(15deg);
+    }
+    93% {
+        transform: rotate(15deg);
+    }
+    94% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    } 
 }
