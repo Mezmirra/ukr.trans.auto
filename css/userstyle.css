@@ -17,28 +17,13 @@
     line-height: 44px;
 }
 
-.work-cycle__items-wrapper,
-.work-cycle__items-top-wrapper,
-.work-cycle__items-middle-wrapper,
-.work-cycle__items-bottom-wrapper {
-    position: relative;
-}
-
 .work-cycle__items-wrapper {
+    position: relative;
     height: 620px;
     text-align: center;
     background-image: url(/img/line.svg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
-}
-
-.work-cycle__items-middle-wrapper {
-    width: 100%;
-    top: 250px;
-}
-
-.work-cycle__items-bottom-wrapper {
-    top: 450px;
 }
 
 .work-cycle__runner-wrapper {
@@ -69,11 +54,6 @@
     width: 120px;
 }
 
-.work-cycle__item:hover .work-cycle__item-img {
-    animation-name: pulse;
-    animation-duration: 0.5s;
-}
-
 .work-cycle__item-text {
     display: block;
     line-height: 25px;
@@ -94,7 +74,7 @@
 /* -- single items styles -- */
 
 .work-cycle__item-ante {
-    top: 0;
+    top: 250px;
     left: 60px;
 }
 
@@ -118,7 +98,7 @@
 }
 
 .work-cycle__item-car-buying {
-    top: 0;
+    top: 450px;
     left: 327px;
 }
 
@@ -142,7 +122,7 @@
 }
 
 .work-cycle__item-port-odessa {
-    top: 5px;
+    top: 455px;
     left: 511px;
 }
 
@@ -166,7 +146,7 @@
 }
 
 .work-cycle__item-repair {
-    top: 0;
+    top: 450px;
     left: 693px;
 }
 
@@ -190,7 +170,7 @@
 }
 
 .work-cycle__item-delivery {
-    top: 0;
+    top: 250px;
     right: 50px;
 }
 
@@ -199,6 +179,340 @@
     animation-duration: 15s;
     animation-delay: 14.7s;
     animation-iteration-count:infinite;
+}
+
+/* ====== MOBILE ====== */
+
+/* ------ 992 - 1199 ------ */
+
+@media (max-width: 1199px) {
+    
+    .work-cycle {
+        font-size: 16px;
+        padding: 60px 0;
+        text-align: center;
+    }
+    
+    .work-cycle__title {
+        margin-bottom: 50px;
+        font-size: 34px;
+        line-height: 40px;
+    }
+    
+    .work-cycle__items-wrapper { 
+        background-image: url(/img/vertical-line-with-points.svg); 
+        height: 686px;
+        width: 616px;
+        margin: 0 auto;
+    }
+    
+    .work-cycle__runner-wrapper { display: none; }
+    
+    .work-cycle__item {
+        display: block;
+        width: 295px;
+    }
+    
+    .work-cycle__item .work-cycle__item-img {
+        height: 32px;
+    }
+    
+    .work-cycle__item-left .work-cycle__item-img {
+        padding-right: 25px;
+    }
+    
+    .work-cycle__item-right .work-cycle__item-img {
+        padding-left: 25px;
+    }
+    
+    .work-cycle__item-left .work-cycle__item-text {
+        animation-name: text-slide-right;
+        animation-duration: 4.5s;
+        animation-iteration-count:infinite;
+    }
+    
+    .work-cycle__item-right .work-cycle__item-text {
+        animation-name: text-slide-left;
+        animation-duration: 4.5s;
+        animation-iteration-count:infinite;
+    }
+    
+    .work-cycle__item-top .work-cycle__item-text,
+    .work-cycle__item-middle .work-cycle__item-img,
+    .work-cycle__item-bottom .work-cycle__item-img {
+        padding-bottom: 0;
+    }
+    
+    .work-cycle__item-text {
+        display: inline-block;
+    }
+    
+    .work-cycle__item-ante {
+        top: 19px;
+        left: 198px;
+    }
+
+    .work-cycle__item-ante .work-cycle__item-img {
+        animation-name: pulse-vert;
+        animation-duration: 4.5s;
+        animation-iteration-count:infinite;
+    }
+
+    .work-cycle__item-auction {
+        top: 93px;
+        left: 115px;
+    }
+
+    .work-cycle__item-auction .work-cycle__item-img {
+        animation-name: pulse-vert;
+        animation-duration: 4.5s;
+        animation-delay: 0.5s;
+        animation-iteration-count:infinite;
+    }
+    
+    .work-cycle__item-auction .work-cycle__item-text {
+        animation-delay: 0.5s;
+    }
+
+    .work-cycle__item-car-buying {
+        top: 169px;
+        left: 252px;
+    }
+
+    .work-cycle__item-car-buying .work-cycle__item-img {
+        animation-name: pulse-vert;
+        animation-duration: 4.5s;
+        animation-delay: 1s;
+        animation-iteration-count:infinite;
+    }
+    
+    .work-cycle__item-car-buying .work-cycle__item-text {
+        animation-delay: 1s;
+    }
+
+    .work-cycle__item-port-us {
+        top: 246px;
+        left: 31px;
+    }
+
+    .work-cycle__item-port-us .work-cycle__item-img {
+        animation-name: pulse-vert;
+        animation-duration: 4.5s;
+        animation-delay: 1.5s;
+        animation-iteration-count:infinite;
+    }
+    
+    .work-cycle__item-port-us .work-cycle__item-text {
+        animation-delay: 1.5s;
+    }    
+
+    .work-cycle__item-port-odessa {
+        top: 323px;
+        left: 289px;
+    }
+
+    .work-cycle__item-port-odessa .work-cycle__item-img {
+        animation-name: pulse-vert;
+        animation-duration: 4.5s;
+        animation-delay: 2s;
+        animation-iteration-count:infinite;
+    }
+    
+    .work-cycle__item-port-odessa .work-cycle__item-text {
+        animation-delay: 2s;
+    }  
+
+    .work-cycle__item-custom {
+        top: 403px;
+        left: 50px;
+    }
+
+    .work-cycle__item-custom .work-cycle__item-img {
+        animation-name: pulse-vert;
+        animation-duration: 4.5s;
+        animation-delay: 2.5s;
+        animation-iteration-count:infinite;
+    }
+    
+    .work-cycle__item-custom .work-cycle__item-text {
+        animation-delay: 2.5s;
+    }  
+
+    .work-cycle__item-repair {
+        top: 479px;
+        left: 203px;
+    }
+
+    .work-cycle__item-repair .work-cycle__item-img {
+        animation-name: pulse-vert;
+        animation-duration: 4.5s;
+        animation-delay: 3s;
+        animation-iteration-count:infinite;
+    }
+    
+    .work-cycle__item-repair .work-cycle__item-text {
+        animation-delay: 3s;
+    } 
+
+    .work-cycle__item-registration {
+        top: 557px;
+        left: 71px;
+    }
+
+    .work-cycle__item-registration .work-cycle__item-img {
+        animation-name: pulse-vert;
+        animation-duration: 4.5s;
+        animation-delay: 3.5s;
+        animation-iteration-count:infinite;
+    }
+    
+    .work-cycle__item-registration .work-cycle__item-text {
+        animation-delay: 3.5s;
+    } 
+
+    .work-cycle__item-delivery {
+        top: 635px;
+        left: 288px;
+    }
+
+    .work-cycle__item-delivery .work-cycle__item-img {
+        animation-name: pulse-vert;
+        animation-duration: 4.5s;
+        animation-delay: 4s;
+        animation-iteration-count:infinite;
+    }
+    
+    .work-cycle__item-delivery .work-cycle__item-text {
+        animation-delay: 4s;
+    } 
+    
+    .work-cycle__item-port-us .work-cycle__item-text,
+    .work-cycle__item-port-odessa .work-cycle__item-text {
+        width: 230px;
+    }
+}
+
+/* ------ xs - 767 ------ */
+
+@media (max-width: 767px) {
+  
+    .work-cycle__title {
+        font-size: 28px;
+        line-height: 34px;
+    }
+    
+    .work-cycle__items-wrapper { 
+        background-position: 7.5% 50%; 
+        width: 350px;
+    }
+    
+    .work-cycle__item {
+        text-align: left;
+    }
+    
+    .work-cycle__item-right .work-cycle__item-text {
+        animation-name: text-slide-right;
+    }
+    
+    .work-cycle__item-ante {
+        top: 19px;
+        left: 32px;
+    }
+
+    .work-cycle__item-auction {
+        top: 96px;
+        left: 102px;
+    }
+
+    .work-cycle__item-auction .work-cycle__item-img {
+        position: absolute;
+        top: -4px;
+        left: -92px;
+    }
+
+    .work-cycle__item-car-buying {
+        top: 169px;
+        left: 37px;
+    }
+    
+    .work-cycle__item-car-buying .work-cycle__item-text {
+        position: absolute;
+        top: 4px;
+        left: 65px;
+    }
+
+    .work-cycle__item-port-us {
+        top: 250px;
+        left: 103px;
+    }
+
+    .work-cycle__item-port-us .work-cycle__item-img {
+        position: absolute;
+        top: -3px;
+        left: -93px;
+    }
+
+    .work-cycle__item-port-odessa {
+        top: 323px;
+        left: 35px;
+    }
+    
+    .work-cycle__item-port-odessa .work-cycle__item-text {
+        position: absolute;
+        top: 4px;
+        left: 67px;
+    }  
+
+    .work-cycle__item-custom {
+        top: 407px;
+        left: 103px;
+    }
+
+    .work-cycle__item-custom .work-cycle__item-img {
+        position: absolute;
+        top: -4px;
+        left: -92px;
+    }
+
+    .work-cycle__item-repair {
+        top: 479px;
+        left: 35px;
+    }
+    
+    .work-cycle__item-repair .work-cycle__item-text {
+        position: absolute;
+        top: 4px;
+        left: 69px;
+    } 
+
+    .work-cycle__item-registration {
+        top: 562px;
+        left: 105px;
+    }
+
+    .work-cycle__item-registration .work-cycle__item-img {
+        position: absolute;
+        top: -4px;
+        left: -95px;
+    }
+
+    .work-cycle__item-delivery {
+        top: 635px;
+        left: 35px;
+        width: 300px;
+    }
+    
+    .work-cycle__item-delivery .work-cycle__item-text {
+        position: absolute;
+        top: 4px;
+        left: 71px;
+    } 
+    
+    .work-cycle__item-port-us .work-cycle__item-text,
+    .work-cycle__item-port-odessa .work-cycle__item-text {
+        width: 230px;
+    }
+    
 }
 
 /* ====== ANIMATION ====== */
@@ -361,4 +675,40 @@
     100% {
         transform: rotate(0deg);
     } 
+}
+
+@keyframes pulse-vert {
+  0%, 100% {
+    transform: scale(1, 1);
+  }
+  6% {
+    transform: scale(1.15, 1.15);
+  }
+  12% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes text-slide-left {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  3.5% {
+    transform: translateX(-10px);
+  }
+  10% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes text-slide-right {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  4.5% {
+    transform: translateX(10px);
+  }
+  17% {
+    transform: translateX(0px);
+  }
 }
