@@ -46,7 +46,7 @@
     top: 293px;
     left: 150px;
     animation-name: moving;
-    animation-duration: 20s;
+    animation-duration: 15s;
     animation-timing-function: linear;
     animation-iteration-count:infinite;
     -moz-animation-iteration-count:infinite;
@@ -55,7 +55,7 @@
 
 .work-cycle__runner {
     animation-name: rotating;
-    animation-duration: 20s;
+    animation-duration: 15s;
     animation-timing-function: linear;
     animation-iteration-count:infinite;
     -moz-animation-iteration-count:infinite;
@@ -69,7 +69,7 @@
     width: 120px;
 }
 
-.work-cycle__item:hover .work-cycle__item-text-img {
+.work-cycle__item:hover .work-cycle__item-img {
     animation-name: pulse;
     animation-duration: 0.5s;
 }
@@ -80,8 +80,8 @@
 }
 
 .work-cycle__item-top .work-cycle__item-text,
-.work-cycle__item-middle .work-cycle__item-text-img,
-.work-cycle__item-bottom .work-cycle__item-text-img {
+.work-cycle__item-middle .work-cycle__item-img,
+.work-cycle__item-bottom .work-cycle__item-img {
     padding-bottom: 23px;
 }
 
@@ -98,9 +98,23 @@
     left: 60px;
 }
 
+.work-cycle__item-ante .work-cycle__item-img {
+    animation-name: pulse;
+    animation-duration: 15s;
+    animation-delay: -0.1s;
+    animation-iteration-count:infinite;
+}
+
 .work-cycle__item-auction {
     top: 70px;
     left: 250px;
+}
+
+.work-cycle__item-auction .work-cycle__item-img {
+    animation-name: pulse-down;
+    animation-duration: 15s;
+    animation-delay: 1.5s;
+    animation-iteration-count:infinite;
 }
 
 .work-cycle__item-car-buying {
@@ -108,9 +122,23 @@
     left: 327px;
 }
 
+.work-cycle__item-car-buying .work-cycle__item-img {
+    animation-name: pulse-up;
+    animation-duration: 15s;
+    animation-delay: 3.5s;
+    animation-iteration-count:infinite;
+}
+
 .work-cycle__item-port-us {
     top: 5px;
     left: 422px;
+}
+
+.work-cycle__item-port-us .work-cycle__item-img {
+    animation-name: pulse-down;
+    animation-duration: 15s;
+    animation-delay: 5.5s;
+    animation-iteration-count:infinite;
 }
 
 .work-cycle__item-port-odessa {
@@ -118,9 +146,23 @@
     left: 511px;
 }
 
+.work-cycle__item-port-odessa .work-cycle__item-img {
+    animation-name: pulse-up;
+    animation-duration: 15s;
+    animation-delay: 7.3s;
+    animation-iteration-count:infinite;
+}
+
 .work-cycle__item-custom {
     top: 35px;
     left: 603px;
+}
+
+.work-cycle__item-custom .work-cycle__item-img {
+    animation-name: pulse-down;
+    animation-duration: 15s;
+    animation-delay: 9s;
+    animation-iteration-count:infinite;
 }
 
 .work-cycle__item-repair {
@@ -128,14 +170,35 @@
     left: 693px;
 }
 
+.work-cycle__item-repair .work-cycle__item-img {
+    animation-name: pulse-up;
+    animation-duration: 15s;
+    animation-delay: 11s;
+    animation-iteration-count:infinite;
+}
+
 .work-cycle__item-registration {
     top: 50px;
     left: 780px;
 }
 
+.work-cycle__item-registration .work-cycle__item-img {
+    animation-name: pulse-down;
+    animation-duration: 15s;
+    animation-delay: 13s;
+    animation-iteration-count:infinite;
+}
+
 .work-cycle__item-delivery {
     top: 0;
     right: 50px;
+}
+
+.work-cycle__item-delivery .work-cycle__item-img {
+    animation-name: pulse;
+    animation-duration: 15s;
+    animation-delay: 14.7s;
+    animation-iteration-count:infinite;
 }
 
 /* ====== ANIMATION ====== */
@@ -144,15 +207,37 @@
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
 @keyframes pulse {
-  from {
+  0%, 100% {
     transform: scale3d(1, 1, 1);
   }
-
-  50% {
-    transform: scale3d(1.05, 1.05, 1.05);
+  2.5% {
+    transform: scale3d(1.1, 1.1, 1.1);
   }
+  5% {
+    transform: scale3d(1, 1, 1);
+  }
+}
 
-  to {
+@keyframes pulse-up {
+  0%, 100% {
+    transform: scale3d(1, 1, 1);
+  }
+  2.5% {
+    transform: scale3d(1.2, 1.2, 1.2) translateY(-7px);
+  }
+  5% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse-down {
+  0%, 100% {
+    transform: scale3d(1, 1, 1);
+  }
+  2.5% {
+    transform: scale3d(1.2, 1.2, 1.2) translateY(7px);
+  }
+  5% {
     transform: scale3d(1, 1, 1);
   }
 }
@@ -202,75 +287,75 @@
         transform: rotate(0deg);
     }
     7% {
-        transform: rotate(-15deg);
+        transform: rotate(-45deg);
     }    
     10% {
-        transform: rotate(-15deg);
+        transform: rotate(-45deg);
     }
     12.5% {
         transform: rotate(0deg);
     }
     14% {
-        transform: rotate(15deg);
+        transform: rotate(50deg);
     }
     23.5% {
-        transform: rotate(15deg);
+        transform: rotate(50deg);
     }
     25% {
         transform: rotate(0deg);
     }
     26.5% {
-        transform: rotate(-15deg);
+        transform: rotate(-50deg);
     }
     36% {
-        transform: rotate(-15deg);
+        transform: rotate(-50deg);
     }
     37.5% {
         transform: rotate(0deg);
     }
     39% {
-        transform: rotate(15deg);
+        transform: rotate(50deg);
     }
     48.5% {
-        transform: rotate(15deg);
+        transform: rotate(50deg);
     }
     50% {
         transform: rotate(0deg);
     }
     51.5% {
-        transform: rotate(-15deg);
+        transform: rotate(-50deg);
     }
     61% {
-        transform: rotate(-15deg);
+        transform: rotate(-50deg);
     }
     62.5% {
         transform: rotate(0deg);
     }
     64% {
-        transform: rotate(15deg);
+        transform: rotate(50deg);
     }
     73.5% {
-        transform: rotate(15deg);
+        transform: rotate(50deg);
     }
     75% {
         transform: rotate(0deg);
     }
     76.5% {
-        transform: rotate(-15deg);
+        transform: rotate(-50deg);
     }
     86% {
-        transform: rotate(-15deg);
+        transform: rotate(-50deg);
     }
     87.5% {
         transform: rotate(0deg);
     }
     89% {
-        transform: rotate(15deg);
+        transform: rotate(45deg);
     }
     93% {
-        transform: rotate(15deg);
+        transform: rotate(45deg);
     }
-    94% {
+    95% {
         transform: rotate(0deg);
     }
     100% {
